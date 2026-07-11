@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriPredict | Indian Crop Production AI</title>
+    <meta name="description" content="Predict agricultural crop production in India using advanced Machine Learning models.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v=5">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>AgriPredict <span>AI</span></h1>
+            <p>Empowering Indian agriculture with predictive intelligence</p>
+        </header>
+
+        <div class="dashboard-layout">
+            <!-- Left Side: Form Panel -->
+            <section class="glass-card form-panel">
+                <h2>Crop Parameters</h2>
+                <form id="prediction-form" class="grid-form">
+                    <div class="form-group">
+                        <label for="crop">Crop Variety</label>
+                        <select id="crop" name="crop" required>
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variety">Subsidiary Variety</label>
+                        <select id="variety" name="variety" required>
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" name="state" required>
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="season">Season</label>
+                        <select id="season" name="season" required>
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="zone">Recommended Zone</label>
+                        <select id="zone" name="zone" required>
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Target Year</label>
+                        <select id="year" name="year" required>
+                            <option value="" disabled selected>Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cost">Cost (₹/Quintal C2)</label>
+                        <input type="number" id="cost" name="cost" step="0.01" placeholder="e.g. 1500" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="area">Area (Hectares)</label>
+                        <input type="number" id="area" name="area" step="0.01" placeholder="e.g. 150.5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="yield">Quantity (Quintals/Hectare)</label>
+                        <input type="number" id="yield" name="yield" step="0.01" placeholder="e.g. 120.3" required>
+                    </div>
+
+                    <button type="submit" class="predict-btn full-width">
+                        <span>Forecast Production</span>
+                        <div class="loader" id="btn-loader"></div>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Right Side: Results & Guide Panel -->
+            <section class="glass-card result-panel">
+                <div id="default-guide" class="default-guide">
+                    <h2>Farmer's Guide</h2>
+                    <p>Welcome to AgriPredict. Fill out the parameters on the left to get a customized prediction and actionable insights for your crop.</p>
+                    <ul>
+                        <li><strong>Step 1:</strong> Select your crop and specific subsidiary variety.</li>
+                        <li><strong>Step 2:</strong> Input your geographical details (State & Zone).</li>
+                        <li><strong>Step 3:</strong> Enter your financial estimates and land area.</li>
+                    </ul>
+                    <p>Our AI will analyze historical patterns and provide a yield forecast to help you optimize resources.</p>
+                </div>
+                
+                <div id="result-container" class="result-container">
+                    <h2>Prediction Dashboard</h2>
+                    <h3>Expected Total Production</h3>
+                    <div class="value">
+                        <span id="prediction-value">--</span> 
+                        <span class="unit">Tons</span>
+                    </div>
+                    <div id="ai-insight" class="ai-insight" style="display: none;"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
