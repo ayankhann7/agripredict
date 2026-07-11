@@ -8,6 +8,13 @@ AgriPredict AI is a machine learning-powered web application designed to predict
 - **Dynamic Data**: Dropdowns for states, crop varieties, and seasons are automatically populated from the trained machine learning model.
 - **AI Farmer Insights**: Generates customized, interactive recommendations for resource optimization and soil health based on the farmer's specific inputs.
 
+## Screenshots
+*(Take two screenshots of your website and save them in the `static/` folder as `screenshot1.png` and `screenshot2.png`)*
+<p align="center">
+  <img src="static/screenshot1.png" alt="AgriPredict Dashboard Layout" width="48%">
+  <img src="static/screenshot2.png" alt="AgriPredict AI Insights" width="48%">
+</p>
+
 ## Technologies Used
 - **Backend**: Python, Flask, Flask-CORS
 - **Machine Learning**: Scikit-Learn (Random Forest Regressor), Pandas, NumPy, Joblib
