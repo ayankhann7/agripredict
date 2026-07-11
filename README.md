@@ -14,7 +14,9 @@ AgriPredict AI is a machine learning-powered web application designed to predict
 - **Frontend**: HTML5, Vanilla CSS (CSS Grid), Vanilla JavaScript
 
 ## Dataset Information
-The model synthesizes and learns from agricultural datasets detailing:
+The model synthesizes and learns from **real agricultural datasets sourced from the Government of India ([data.gov.in](https://data.gov.in/))**. The historical data spans across the years **2001 to 2014**, providing a highly accurate baseline for modern predictions.
+
+The dataset includes:
 - Crop types and subsidiary varieties
 - States and recommended cultivation zones
 - Seasons and crop duration
